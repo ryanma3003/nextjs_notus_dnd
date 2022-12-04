@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const DB_URI = process.env.MONGODB_URI;
+const DB_URI = process.env.NEXT_PUBLIC_DB_URI;
+// const DB_URI = process.env.MONGODB_URI;
 if (!DB_URI) {
     throw new Error(
         "Please define the DB_URI environment variable inside .env.local"
