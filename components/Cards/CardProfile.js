@@ -4,7 +4,8 @@ import { useDrop } from 'react-dnd';
 import { ItemTypes } from '../../utils/items';
 import axios from 'axios';
 
-const url = "http://localhost:3000/api/task";
+// const url = "http://localhost:3000/api/task";
+const url = "https://cybersecuritycontrol-ryanma3003.vercel.app/api/task";
 
 // components
 
