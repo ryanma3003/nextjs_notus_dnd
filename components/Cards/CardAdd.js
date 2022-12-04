@@ -26,7 +26,7 @@ const CardAdd = ({tasks, setTaskList}) => {
 		try {
 			if (task._id) {
 				const { data } = await axios.put(url + "/" + task._id, { title: task.title, point: task.point });
-				const originalTasks = [...taskList];
+				const originalTasks = [...tasks];
 				const index = originalTasks.findIndex((t) => t.id === task._id);
 				originalTasks[index] = data.data;
 				setTaskList(originalTasks);
