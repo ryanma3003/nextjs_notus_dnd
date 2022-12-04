@@ -7,7 +7,7 @@ import axios from 'axios';
 // components
 
 // const url = "http://localhost:3000/api/task";
-const url = "https://cybersecuritycontrol-ryanma3003.vercel.app/api/task";
+const url = "https://cybersecuritycontrol.vercel.app/api/task";
 
 export default function CardSettings({ tasks, setTaskList }) {
   const [task, setTask] = useState({ title: "", point: "", status: "done" });

@@ -13,7 +13,7 @@ import axios from 'axios';
 import Admin from "layouts/Admin.js";
 
 // const url = "http://localhost:3000/api/task";
-const url = "https://cybersecuritycontrol-ryanma3003.vercel.app/api/task";
+const url = "https://cybersecuritycontrol.vercel.app/api/task";
 
 export default function Catalogue(props) {
   const [tasks, setTaskList] = useState(props.tasks);
