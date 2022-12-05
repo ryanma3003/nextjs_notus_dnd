@@ -17,6 +17,7 @@ const url = "https://cybersecuritycontrol.vercel.app/api/task";
 
 export default function Catalogue(props) {
   const [tasks, setTaskList] = useState(props.tasks);
+  console.log(tasks);
 	const total_point = tasks.filter((task, i) => task.status === 'done').reduce((accum, item) => accum + item.point, 0);
 	const total_choosen = tasks.filter((task, i) => task.status === 'done').length;
   const total_item = tasks.length;
@@ -77,7 +78,7 @@ export const getServerSideProps = async () => {
   const { data } = await axios.get(url);
   return {
     props: {
-      tasks: data.data,
+      tasks: JSON.parse(JSON.stringify(data.data)),
     },
   };
 }
