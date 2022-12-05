@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
-    title: {type: String, required: true},
+    title: {type: String},
     point: {type: Number, min: 10, max: 1000},
-    status: {type: String, required: true},
+    status: {type: String},
 });
 
 // export default mongoose.models.Task;
