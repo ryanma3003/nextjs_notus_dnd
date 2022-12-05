@@ -41,11 +41,11 @@ export default function CardSettings({ tasks, setTaskList }) {
             <h6 className="text-blueGray-700 text-xl font-bold">Choosen Items</h6>
           </div>
         </div>
-        <div className="flex-auto px-4 lg:px-10 py-10 pt-3">
+        <div className="flex-auto px-4 py-10 pt-3">
           <div className="flex flex-wrap justify-center">
             {tasks.filter((task, i) => task.status === 'done').length === 0 && <h6 className="text-blueGray-700 text-xl font-bold">No Item</h6>}
             {tasks.filter((task, i) => task.status === 'done').map((task, i) => (
-              <div className="w-full lg:w-1 xl:w-1 px-4 mb-3">
+              <div className="w-full flex-1 px-4 mb-3">
                 <CardItem
                   key={task._id}
                   id={task._id}

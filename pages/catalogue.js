@@ -18,6 +18,7 @@ const url = "https://cybersecuritycontrol.vercel.app/api/task";
 export default function Catalogue(props) {
   const [tasks, setTaskList] = useState(props.tasks);
 	const total_point = tasks.filter((task, i) => task.status === 'done').reduce((accum, item) => accum + item.point, 0);
+	const total_choosen = tasks.filter((task, i) => task.status === 'done').length;
   const total_item = tasks.length;
   // console.log(tasks, setTaskList);
 
@@ -26,7 +27,7 @@ export default function Catalogue(props) {
 
       {/* Card stats */}
       <div className="flex flex-wrap mb-3">
-        <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+        <div className="w-full flex-1 xl:w-4/12 px-4">
           <CardStats
             statSubtitle="Total Items"
             statTitle={total_item}
@@ -34,12 +35,20 @@ export default function Catalogue(props) {
             statIconColor="bg-red-500"
           />
         </div>
-        <div className="w-full lg:w-6/12 xl:w-8/12 px-4">
+        <div className="w-full lg:w-8/12 xl:w-8/12 px-4">
           <CardStats
-            statSubtitle="Total Point"
+            statSubtitle="Total Choosen Point"
             statTitle={total_point}
             statIconName="fas fa-chart-pie"
             statIconColor="bg-orange-500"
+          />
+        </div>
+        <div className="w-full flex-1 xl:w-4/12 px-4">
+          <CardStats
+            statSubtitle="Total Choosen"
+            statTitle={total_choosen}
+            statIconName="far fa-chart-bar"
+            statIconColor="bg-red-500"
           />
         </div>
       </div>
@@ -49,10 +58,12 @@ export default function Catalogue(props) {
         </div>
       </div>
       <div className="flex flex-wrap">
-        <div className="w-full flex-1 px-4">
+        <div className="w-full lg:w-1 px-4">
           <CardProfile tasks={tasks} setTaskList={setTaskList} />
         </div>
-        <div className="w-full lg:w-8/12 px-4">
+      </div>
+      <div className="flex flex-wrap">
+        <div className="w-full lg:w-1 px-4">
           <CardSettings tasks={tasks} setTaskList={setTaskList} />
         </div>
       </div>

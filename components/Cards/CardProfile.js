@@ -55,7 +55,7 @@ export default function CardProfile({ tasks, setTaskList }) {
 					<div className="flex flex-wrap justify-center">
 						{tasks.filter((task, i) => task.status === 'wip').length === 0 && <h6 className="text-blueGray-700 text-xl font-bold">No Item</h6>}
 						{tasks.filter((task, i) => task.status === 'wip').map((task, i) => (
-							<div className="w-full lg:w-1 xl:w-1 px-4 mb-3">
+							<div className="w-full flex-1 px-4 mb-3">
 								<CardItem
 									key={task._id}
 									id={task._id}
