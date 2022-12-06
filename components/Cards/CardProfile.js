@@ -63,9 +63,9 @@ export default function CardProfile({ tasks, setTaskList }) {
 									title={task.title}
 								/>
 
-								<button className="bg-red-500 text-white mt-3 text-xs px-2 py-1 rounded shadow outline-none" onClick={() => deleteTask(task._id)}>
+								{/* <button className="bg-red-500 text-white mt-3 text-xs px-2 py-1 rounded shadow outline-none" onClick={() => deleteTask(task._id)}>
 									<i className="fas fa-trash"></i> Delete
-								</button>
+								</button> */}
 							</div>
 						))}
 					</div>
