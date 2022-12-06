@@ -23,7 +23,7 @@ const CardItem = (props) => {
                             <h5 className="text-blueGray-800 font-bold text-sm mb-2">
                                 {props.title}
                             </h5>
-                            <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-white bg-emerald-400 uppercase last:mr-0 mr-1">
+                            <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-white bg-orange-500 uppercase last:mr-0 mr-1">
                                 <i className="fas fa-coins"></i> {props.point}
                             </span>
                         </div>
